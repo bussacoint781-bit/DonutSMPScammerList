@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DonutSMP Scammer List</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">Community trade safety record</div>
+      <h1 class="title">DONUTSMP<br><span class="accent">SCAMMER</span> LIST</h1>
+      <p class="hero-sub">
+        A running record of players reported for scamming on DonutSMP —
+        item non-delivery, dupe scams, fake middlemen, and bad-faith trades.
+        Search a name before you trade with them.
+      </p>
+      <div class="stat-row">
+        <div class="stat"><div class="n" id="statTotal">0</div><div class="l">Total cases</div></div>
+        <div class="stat"><div class="n" id="statConfirmed">0</div><div class="l">Confirmed</div></div>
+        <div class="stat"><div class="n" id="statReported">0</div><div class="l">Under review</div></div>
+      </div>
+    </header>
+
+    <div class="banner">
+      <strong>Reporting a scammer or disputing a listing?</strong><br>
+      Message <code>jz.siep</code> on Discord with proof — screenshots, chat logs,
+      or transaction history. Entries marked "Reported — unverified" haven't been
+      independently confirmed yet; "Confirmed" entries have had their evidence reviewed.
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by in-game name or Discord tag…" autocomplete="off" />
+    </div>
+    <div class="search-meta" id="searchMeta"></div>
+
+    <div class="case-list" id="caseList"></div>
+
+    <footer>
+      This list is community-maintained and reflects reports submitted with supporting
+      evidence. It is not a legal determination of wrongdoing. If you were listed in
+      error, message jz.siep on Discord with evidence to request a correction or removal.
+    </footer>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

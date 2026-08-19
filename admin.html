@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — DonutSMP Scammer List</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="admin-gate" id="gate">
+      <div class="eyebrow" style="justify-content:center">Restricted</div>
+      <h1 class="title" style="font-size:32px">ADMIN ACCESS</h1>
+      <input type="password" id="pwInput" placeholder="Password" />
+      <button id="pwBtn">Unlock</button>
+      <div class="gate-error" id="pwError"></div>
+    </div>
+
+    <div class="admin-panel" id="panel">
+      <header class="hero" style="padding-top:32px">
+        <div class="eyebrow">Admin panel</div>
+        <h1 class="title" style="font-size:36px">MANAGE CASES</h1>
+        <p class="hero-sub">
+          Add or remove entries below. Nothing here is live — when you're
+          done, export the updated data.js and commit/push it to your
+          GitHub repo to publish the changes.
+        </p>
+      </header>
+
+      <div class="admin-form">
+        <h2>Add a case</h2>
+        <form id="addForm">
+          <div class="form-grid">
+            <div class="form-row">
+              <label>In-game name</label>
+              <input type="text" name="ign" required />
+            </div>
+            <div class="form-row">
+              <label>Discord tag (optional)</label>
+              <input type="text" name="discord" />
+            </div>
+          </div>
+          <div class="form-grid">
+            <div class="form-row">
+              <label>Status</label>
+              <select name="status">
+                <option value="reported">Reported — unverified</option>
+                <option value="confirmed">Confirmed</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label>Date reported</label>
+              <input type="date" name="dateAdded" />
+            </div>
+          </div>
+          <div class="form-row">
+            <label>Reason</label>
+            <textarea name="reason" required placeholder="What happened, in a sentence or two."></textarea>
+          </div>
+          <div class="form-row">
+            <label>Evidence on file</label>
+            <textarea name="evidence" placeholder="e.g. Chat log + payment screenshots on file with jz.siep."></textarea>
+          </div>
+          <button type="submit" class="btn">Add case</button>
+        </form>
+      </div>
+
+      <h2 style="font-family:'Special Elite',monospace;font-size:18px;margin-bottom:14px;">Current cases</h2>
+      <div id="adminList"></div>
+
+      <div class="export-box" id="exportBoxWrap">
+        <button class="btn secondary" id="exportBtn">Preview updated data.js</button>
+        <button class="btn secondary" id="downloadBtn">Download updated data.js</button>
+        <div id="exportBox" style="display:none">
+          <textarea id="exportArea" readonly></textarea>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
